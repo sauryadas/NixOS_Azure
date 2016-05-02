@@ -22,5 +22,6 @@ $ azure storage blob upload -t page -a bg09 -k $KEY --container vm-images nixos-
 
 ### Create a VM 
 ```
-$ azure vm create nixResGrp nixVm001 WestUS Linux -d https://bg09.blob.core.windows.net/vm-images/nixos-nstable-standalone.vhd --nic-name nixNic1 --vnet-name nix-vnet1 --vnet-address-prefix 10.0.0.1/16 --vnet-subnet-name nix-subnet1 --vnet-subnet-address-prefix 10.0.1.1/24 --public-ip-name nix-public-ip --public-ip-domain-name nix-public-ip-domain --admin-username azureuser
+$ azure vm create nixResGrp nixVm001 WestUS Linux -d https://bg09.blob.core.windows.net/vm-images/root.vhd
+-Q https://bg09.blob.core.windows.net/vm-images/nixos-nstable-standalone.vhd --nic-name nixNic1 --vnet-name nix-vnet1 --vnet-address-prefix 10.0.0.1/16 --vnet-subnet-name nix-subnet1 --vnet-subnet-address-prefix 10.0.1.1/24 --public-ip-name nix-public-ip --public-ip-domain-name nix-public-ip-domain --admin-username azureuser
 ```
